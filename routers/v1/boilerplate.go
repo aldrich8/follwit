@@ -12,5 +12,6 @@ RegisterBoilerplateRoutes
 func RegisterBoilerplateRoutes(router chi.Router) {
 	router.Route("/boilerplate", func(r chi.Router) {
 		r.Get("/{id}", controllers.GetBoilerplate)
+		r.Post("/create", controllers.CreateBoilerplate)
 	})
 }
